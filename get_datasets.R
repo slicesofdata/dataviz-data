@@ -3,10 +3,10 @@
 get_datasets <- function(
   name,
   data_files = c(
-    "coffee_shop.Rds",
-    "fitness_tracking.Rds",
-    "restaurant_dining.Rds",
-    "escape_room.Rds",
+    #"coffee_shop.Rds",
+    #"fitness_tracking.Rds",
+    #"restaurant_dining.Rds",
+    #"escape_room.Rds",
     "women_clothing.Rds",
     "medical_insurance.Rds",
     "ai_student_impact.Rds",
