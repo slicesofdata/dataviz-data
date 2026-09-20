@@ -129,7 +129,3 @@ if (exists("name", inherits = TRUE)) {
     get_datasets(name = name)
   }
 }
-# cleanup
-
-rm(get_datasets)
-rm(name)
