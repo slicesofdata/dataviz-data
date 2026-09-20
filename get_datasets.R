@@ -2,14 +2,14 @@
 # Cross-platform (Mac / Linux / Windows) downloader for a public GitHub .rds file
 get_datasets <- function(
   name,
-  files = c(
+  data_files = c(
     "coffee_shop.Rds",
     "fitness_tracking.Rds",
     "restaurant_dining.Rds",
     "escape_room.Rds",
     "women_clothing.Rds",
     "medical_insurance.Rds",
-    #"ai_student_impact.Rds",
+    "ai_student_impact.Rds",
     "tech_startup.Rds"
   ),
   github_user = "slicesofdata",
@@ -50,16 +50,16 @@ get_datasets <- function(
   # Save as RDS — loop through each requested file
 
   # Ensure every filename ends in .rds
-  files <- ifelse(
-    grepl("\\.Rds$", files, ignore.case = FALSE),
-    files,
-    paste0(files, ".Rds")
+  data_files <- ifelse(
+    grepl("\\.Rds$", data_files, ignore.case = FALSE),
+    data_files,
+    paste0(data_files, ".Rds")
   )
 
-  results <- vector("list", length(files))
-  names(results) <- files
+  results <- vector("list", length(data_files))
+  names(results) <- data_files
 
-  for (file_name in files) {
+  for (file_name in data_files) {
     local_path <- path(output_dir, file_name)
     temp_path <- path(output_dir, paste0(file_name, ".tmp"))
 
@@ -112,7 +112,7 @@ get_datasets <- function(
     )
   } else {
     message("\nData file(s) downloaded successfully.")
-    #message("\nAll ", length(files), " file(s) downloaded successfully.")
+    #message("\nAll ", length(data_files), " file(s) downloaded successfully.")
   }
 
   invisible(results)
@@ -123,9 +123,13 @@ get_datasets <- function(
 # call sync_data() using it. If `files` is also predefined, use that;
 # otherwise fall back to the function's own default.
 if (exists("name", inherits = TRUE)) {
-  if (exists("files", inherits = TRUE)) {
-    get_datasets(name = name, files = files)
+  if (exists("data_files", inherits = TRUE)) {
+    get_datasets(name = name, data_files = data_files)
   } else {
     get_datasets(name = name)
   }
 }
+# cleanup
+rm(get_dataset)
+rm(name)
+rm(data_files)
