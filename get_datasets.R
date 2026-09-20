@@ -9,7 +9,7 @@ get_datasets <- function(
     "escape_room.Rds",
     "women_clothing.Rds",
     "medical_insurance.Rds",
-    "ai_student_impact.Rds",
+    #"ai_student_impact.Rds",
     "tech_startup.Rds"
   ),
   github_user = "slicesofdata",
