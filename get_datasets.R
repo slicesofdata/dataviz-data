@@ -1,6 +1,6 @@
 # download_rds.R
 # Cross-platform (Mac / Linux / Windows) downloader for a public GitHub .rds file
-sync_data <- function(
+get_datasets <- function(
   name,
   files = c("coffee_shop.Rds", "fitness_tracking.Rds"),
   github_user = "slicesofdata",
@@ -114,8 +114,8 @@ sync_data <- function(
 # otherwise fall back to the function's own default.
 if (exists("name", inherits = TRUE)) {
   if (exists("files", inherits = TRUE)) {
-    sync_data(name = name, files = files)
+    get_datasets(name = name, files = files)
   } else {
-    sync_data(name = name)
+    get_datasets(name = name)
   }
 }
