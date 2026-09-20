@@ -41,9 +41,9 @@ sync_data <- function(
 
   # Ensure every filename ends in .rds
   files <- ifelse(
-    grepl("\\.rds$", files, ignore.case = TRUE),
+    grepl("\\.Rds$", files, ignore.case = TRUE),
     files,
-    paste0(files, ".rds")
+    paste0(files, ".Rds")
   )
 
   results <- vector("list", length(files))
