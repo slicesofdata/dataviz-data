@@ -4,10 +4,10 @@ get_project_datasets <- function(
   name = "project",
   data_files = c(
     park_visits = "1980_2025_park_visits_irma_nps_gov.Rds",
-    state_of_cal_salary = "state_of_california_salary_2011_2024.Rds",
-    univ_of_cal_salary = "university_of_california_salary_2015_2024.Rds",
-    cal_state_salary = "california_state_university_salary_2015_2024.Rds",
-    la_county_salary = "los-angeles-county-salary-2021-2025.Rds",
+    #state_of_cal_salary = "state_of_california_salary_2011_2024.Rds",
+    #univ_of_cal_salary = "university_of_california_salary_2015_2024.Rds",
+    #cal_state_salary = "california_state_university_salary_2015_2024.Rds",
+    #la_county_salary = "los-angeles-county-salary-2021-2025.Rds",
     claremont_salary = "claremont_salary_2016_2025.Rds"
   ),
   #github_user = "slicesofdata",
