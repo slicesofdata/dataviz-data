@@ -41,7 +41,7 @@ sync_data <- function(
 
   # Ensure every filename ends in .rds
   files <- ifelse(
-    grepl("\\.Rds$", files, ignore.case = TRUE),
+    grepl("\\.Rds$", files, ignore.case = FALSE),
     files,
     paste0(files, ".Rds")
   )
@@ -105,4 +105,16 @@ sync_data <- function(
   }
 
   invisible(results)
+}
+
+# --- Auto-run when sourced ---
+# If `name` already exists in the environment that sourced this file,
+# call sync_data() using it. If `files` is also predefined, use that;
+# otherwise fall back to the function's own default.
+if (exists("name", inherits = TRUE)) {
+  if (exists("files", inherits = TRUE)) {
+    sync_data(name = name, files = files)
+  } else {
+    sync_data(name = name)
+  }
 }
