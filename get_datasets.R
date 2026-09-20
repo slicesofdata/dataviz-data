@@ -130,6 +130,6 @@ if (exists("name", inherits = TRUE)) {
   }
 }
 # cleanup
-rm(get_dataset)
+
+rm(get_datasets)
 rm(name)
-rm(data_files)
