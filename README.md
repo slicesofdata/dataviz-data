@@ -1,2 +1,2 @@
-# data-viz-data
+# dataviz-data
 Various data sets for projects
