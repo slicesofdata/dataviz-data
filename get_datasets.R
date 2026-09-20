@@ -2,7 +2,16 @@
 # Cross-platform (Mac / Linux / Windows) downloader for a public GitHub .rds file
 get_datasets <- function(
   name,
-  files = c("coffee_shop.Rds", "fitness_tracking.Rds"),
+  files = c(
+    "coffee_shop.Rds",
+    "fitness_tracking.Rds",
+    "restaurant_dining.Rds",
+    "escape_room.Rds",
+    "women_clothing.Rds",
+    "medical_insurance.Rds",
+    "ai_student_impact.Rds",
+    "tech_startup.Rds"
+  ),
   github_user = "slicesofdata",
   github_repo = "dataviz-data",
   branch = "main"
