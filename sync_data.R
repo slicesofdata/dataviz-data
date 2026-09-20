@@ -4,7 +4,7 @@ sync_data <- function(
   name,
   files = c("coffee_shop.Rds", "fitness_tracking.Rds"),
   github_user = "slicesofdata",
-  github_repo = "data-viz-data",
+  github_repo = "dataviz-data",
   branch = "main"
 ) {
   # Install here if needed
